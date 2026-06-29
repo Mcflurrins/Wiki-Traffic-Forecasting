@@ -130,11 +130,8 @@ SMAPE is symmetric and handles both high and low traffic articles fairly, penali
 
 The model is validated using **SMAPE** on the holdout test period, getting a public and private score of 40.47791 on the private and public leaderboards, around 5 points away from the top scorer. Multi-input architecture with categorical embeddings typically outperforms single-input baselines, as it leverages language-specific and access-type patterns in traffic.
 
-For further improvements, consider:
-- Ensemble methods (stacking multiple models)
-- Exogenous features (holidays, events)
-- More sophisticated imputation (KNN, multiple imputation)
-- Temporal regularization (penalize sharp day-to-day changes)
+WIP: XGBoost + Lag
+This model was designed with interpretability and simplicity in mind. Neural networks are good at catching general patterns, but it'd be worth adding XGBoost with lagged features combined with ratios linked to days of the week or other features to further refine the granular accuracy of our model. 
 
 ---
 
